@@ -1,0 +1,208 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 20px;
+    font-family: 'Nunito', sans-serif;
+}
+body{
+    background-color:lightgray;
+}
+header{
+    position: fixed;
+    display: flex;
+    top:0;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: rgba(248, 248, 248, 0.322);
+}
+header h1{
+    margin:0.3rem 1rem;
+}
+header ul{
+    display: flex;
+    margin-right: 2%;
+    width: 30%;
+    justify-content: space-between;
+    align-items: center;
+
+}
+header li{
+    list-style:none;
+    display: inline-block;
+    padding:0.2rem 2rem;
+    background-color: rgb(255, 255, 255);
+    border-radius: 0.7rem;
+    font-weight: 500;
+    font-size: 1.2rem;   
+}
+@media only screen and (max-width:1600px){
+header ul{
+            width: 60%;
+        }
+}
+@media only screen and (max-width:875px){
+    h1{
+        font-size: 0.5em;
+    }
+    header li{
+            padding: 1px 3px;
+            font-size: 0.7rem;
+        }
+    
+    }
+
+main{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 4rem; 
+}
+@media only screen and (max-width:1600px){
+    main{
+        width: 80%;
+    }
+}
+@media only screen and (max-width:875px){
+    main{
+        width: 95%;
+    }
+}
+main #banner{
+    display: flex;
+    justify-content: flex-start;
+    align-items:flex-start;
+    width: 100%;
+    text-align: center;
+    background-image: url(./pictures/banner-1.jpg);
+    background-position:top;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height:40vh;
+    margin: 0;
+}
+@media only screen and (max-width:875px){
+    main #banner{
+        height:20vh;
+    }
+}
+#banner h1{
+    position: relative;
+    top:40% ;
+    left: 50%;
+    width: max-content;
+    height: min-content;
+    /* border: 1px solid rgb(114, 110, 110); */
+    color: rgba(255, 0, 0, 0.61);
+    font-weight: bold;
+    font-style: italic;
+    padding: 2% 4%;
+    border-radius: 1.5rem;
+}
+#banner h1 a{
+    width: 10%;
+    height: 10%;
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+    border: 1px solid rgb(114, 110, 110);
+    text-decoration: none;
+    z-index: 5;
+}
+#banner h1 a:link{
+    color: black;
+}
+#banner h1 a:visited{
+    color: rgb(160, 20, 20);
+}
+#banner h1 a:hover{
+    background-color: rgb(117, 117, 117);
+    color: lightgrey;
+}
+
+#main-grid{
+    display: grid;
+    gap: 30px;
+    grid-template-columns: 40% auto 40%;
+    grid-template-rows: 18rem 18rem 5rem;
+    grid-template-areas: "q1 p1 q2"
+                        "q3 p2 p3"
+                        ". . p3";
+    /* justify-content: center;
+    justify-items: center;
+    align-content: baseline;
+    align-items: start; */
+    width: 100%;
+    margin: auto;
+    margin-top: 2rem;
+}
+#health{
+    grid-area: q1;
+}
+#mental{
+    grid-area: q2;
+}
+#join{
+    grid-area: q3;
+}
+#pic1{
+    grid-area: p1;
+}
+#pic2{
+    grid-area: p2;
+}
+#pic3{
+    grid-area: p3;
+}
+#pic3 img{
+    margin: auto;
+    height: 90%;
+    width: 100%;
+    overflow:scroll;
+    object-fit: contain;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding:0.3rem 1rem;
+    background-color: rgb(134, 134, 134);
+    position: relative;
+    bottom: 0;
+    font-weight: 800;
+    
+}
+
+@media only screen and (max-width:1080px){
+    #main-grid{
+        display: grid;
+        grid-template-columns: 30vw 30vw ;
+        grid-template-rows:auto;
+        gap: 0.5rem;
+        grid-template-areas: none;
+        grid-template-areas:
+        "q1 q1"
+        "q2 q2"
+        "q3 q3"
+        "p1 p3"
+        "p2 p3";
+        /* justify-content: center;
+        justify-items: center;
+        align-content: baseline;
+        align-items: start; */
+        width: auto;
+        margin: auto;
+        margin-top: 0;
+        justify-content: stretch;
+    }
+
+}
+#pic3{
+    overflow: hidden;
+}
+
+
